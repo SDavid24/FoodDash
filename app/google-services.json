@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "16124102143",
+    "project_id": "fooddash-ba9a3",
+    "storage_bucket": "fooddash-ba9a3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:16124102143:android:f89e1c03c939194ade13ca",
+        "android_client_info": {
+          "package_name": "com.example.fooddash"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "16124102143-on3a4kic1ln0v874477q6pf9uo13vqfs.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCuIb6D32v-ukI1o8mt3SzMBxFFt9Od-iE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "16124102143-on3a4kic1ln0v874477q6pf9uo13vqfs.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,41 @@
+<resources>
+    <string name="app_name">FoodDash</string>
+    <string name="food_delivery_app">Food Delivery App</string>
+    <string name="get_started">Get Started</string>
+    <string name="cart_button_that_leads_to_cart_activity">Cart button that leads to cart activity</string>
+    <string name="categories">Categories</string>
+    <string name="popular">Popular</string>
+    <string name="order_now">Order Now</string>
+    <string name="may_2_june_10">May 2 - June 10</string>
+    <string name="free_delivery">Free Delivery</string>
+
+    <!--ShowDetailsActivity strings-->
+    <string name="add_to_cart">Add to Cart</string>
+
+    <!--Cart_List_Activity strings-->
+    <string name="delivery_services">Delivery Services:</string>
+    <string name="my_cart">My Cart</string>
+    <string name="items_total">Items Total:</string>
+    <string name="tax">Tax:</string>
+    <string name="total">Total:</string>
+    <string name="default_total_value_text">$0</string>
+    <string name="support">Support</string>
+    <string name="home">Home</string>
+    <string name="profile">Profile</string>
+    <string name="settings">Settings</string>
+    <string name="your_cart_is_empty">Your cart is empty!</string>
+    <string name="checkout">CheckOut</string>
+
+    <!--Signup & Sign in activities strings-->
+    <string name="don_t_have_an_account">Don\'t Have an Account ?</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="sign_in">Sign In</string>
+    <string name="password">Password</string>
+    <string name="email">Email</string>
+    <string name="login">Login</string>
+    <string name="mobile_number">Mobile Number</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="already_have_an_account">Already have an Account ?</string>
+    <string name="last_name">Last Name</string>
+    <string name="first_name">First Name</string>
+</resources>
