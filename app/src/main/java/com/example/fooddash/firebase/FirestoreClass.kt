@@ -1,9 +1,7 @@
 package com.example.fooddash.firebase
 
-import android.app.Activity
 import android.content.Context
 import androidx.fragment.app.Fragment
-import com.example.fooddash.*
 import com.example.fooddash.fragments.intro.LoginFragment
 import com.example.fooddash.fragments.intro.SignupFragment
 import com.example.fooddash.fragments.operations.HomeFragment
@@ -29,25 +27,6 @@ class FirestoreClass {
         }
     }
 
-    fun loadUserData(activity: Activity){
-        mFirestoreClass.collection(Constants.USERS)
-            .document(getCurrentUserId()).get()
-            .addOnSuccessListener { document->
-
-                val loggedInUser = document.toObject(User::class.java)!!
-                when (activity){
-                    is LoginActivity ->{
-                        activity.signInSuccess(loggedInUser)
-                    }
-
-                    is MainActivity ->{
-                        activity.updateNavigationUserDetails(loggedInUser)
-                    }
-
-                }
-            }
-
-    }
     fun loadUserDataFragment(fragment: Fragment){
         mFirestoreClass.collection(Constants.USERS)
             .document(getCurrentUserId()).get()
