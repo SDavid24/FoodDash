@@ -21,7 +21,7 @@ class CategoryAdapter(
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
         return CategoryViewHolder(
-            LayoutInflater.from(context)
+            LayoutInflater.from(parent.context)
                 .inflate(R.layout.viewholder_category, parent, false)
         )
     }

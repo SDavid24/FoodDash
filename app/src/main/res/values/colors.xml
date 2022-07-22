@@ -12,4 +12,7 @@
     <color name="native_orange">#ff5e00</color>
     <color name="app_bar_grey_color">#f6f6f6</color>
     <color name="app_bar_icon_text_color">#676767</color>
+
+    <color name="snackBar_error_color">#F72400</color>
+
 </resources>

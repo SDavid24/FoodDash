@@ -7,16 +7,9 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.fooddash.R
 import com.example.fooddash.models.FoodModel
-import android.content.Intent
 
 import com.bumptech.glide.Glide
-import com.example.fooddash.MainActivity
-import com.example.fooddash.ShowDetailsActivity
-import com.example.fooddash.utils.Constants
-import kotlinx.android.synthetic.main.activity_main.view.*
-import kotlinx.android.synthetic.main.viewholder_category.view.*
 import kotlinx.android.synthetic.main.viewholder_popular.view.*
-import kotlinx.coroutines.NonDisposableHandle.parent
 
 class PopularFoodsAdapter(
     private val context: Context,
@@ -31,7 +24,7 @@ class PopularFoodsAdapter(
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PopularFoodViewHolder {
         return PopularFoodViewHolder(
-            LayoutInflater.from(context)
+            LayoutInflater.from(parent.context)
                 .inflate(R.layout.viewholder_popular, parent, false)
         )
     }

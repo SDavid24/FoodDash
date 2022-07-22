@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.NewMainActivity">
+
+    <FrameLayout
+        android:id="@+id/flFragment_Cen"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:id="@+id/bottomContainerFragmentCen"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <com.google.android.material.bottomappbar.BottomAppBar
+            android:id="@+id/fragment_app_bar_Cen"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:backgroundTint="@color/app_bar_grey_color"
+            app:fabCradleMargin="8dp"
+            app:fabCradleRoundedCornerRadius="50dp"
+            app:fabCradleVerticalOffset="6dp"
+            >
+
+            <com.google.android.material.bottomnavigation.BottomNavigationView
+                android:id="@+id/bottomNavigationViewFragmentCen"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:menu="@menu/bottom_nav"/>
+
+
+            <!--
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <LinearLayout
+                                android:id="@+id/homeBtn"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.2"
+                                android:orientation="vertical">
+
+                                <ImageView
+                                    android:id="@+id/home_icon"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    app:srcCompat="@drawable/bottom_btn1" />
+
+                                <TextView
+                                    android:id="@+id/home_icon_text"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/home"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/app_bar_icon_text_color"
+                                    android:textSize="@dimen/app_bar_icon_text_size" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/profileBtn"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.2"
+                                android:orientation="vertical">
+
+                                <ImageView
+                                    android:id="@+id/profile_icon"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    app:srcCompat="@drawable/bottom_btn2" />
+
+                                <TextView
+                                    android:id="@+id/profile_icon_text"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/profile"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/app_bar_icon_text_color"
+                                    android:textSize="@dimen/app_bar_icon_text_size" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/invisible_btn"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.2"
+                                android:orientation="vertical"
+                                android:visibility="invisible">
+
+                                <ImageView
+                                    android:id="@+id/invisible_icon"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    app:srcCompat="@drawable/btn1" />
+
+                                <TextView
+                                    android:id="@+id/invisible_icon_text"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/home"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/app_bar_icon_text_color"
+                                    android:textSize="@dimen/app_bar_icon_text_size" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/supportBtn"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.2"
+                                android:orientation="vertical">
+
+                                <ImageView
+                                    android:id="@+id/support_text"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    app:srcCompat="@drawable/bottom_btn3" />
+
+                                <TextView
+                                    android:id="@+id/support_text_icon"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/support"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/app_bar_icon_text_color"
+                                    android:textSize="@dimen/app_bar_icon_text_size" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/setting_btn"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.2"
+                                android:orientation="vertical">
+
+                                <ImageView
+                                    android:id="@+id/setting_icon"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    app:srcCompat="@drawable/bottom_btn4" />
+
+                                <TextView
+                                    android:id="@+id/setting_text"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/settings"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/app_bar_icon_text_color"
+                                    android:textSize="@dimen/app_bar_icon_text_size" />
+                            </LinearLayout>
+                        </LinearLayout>
+            -->
+        </com.google.android.material.bottomappbar.BottomAppBar>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fragment_fab_cartBtn_Cen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/native_orange"
+            android:elevation="3dp"
+            android:src="@drawable/shopping_cart"
+            app:backgroundTint="@color/native_orange"
+            app:layout_anchor="@id/fragment_app_bar_Cen"
+            app:maxImageSize="30dp"
+            app:tint="@color/white"
+            android:contentDescription="@string/cart_button_that_leads_to_cart_activity">
+
+        </com.google.android.material.floatingactionbutton.FloatingActionButton>
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
