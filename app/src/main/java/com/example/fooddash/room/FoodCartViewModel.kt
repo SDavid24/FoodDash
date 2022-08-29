@@ -8,7 +8,6 @@ import com.example.fooddash.models.FoodModel
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
-
 class FoodCartViewModel(application: Application): AndroidViewModel(application) {
 
     val readAllData: LiveData<List<FoodModel>>
@@ -20,14 +19,12 @@ class FoodCartViewModel(application: Application): AndroidViewModel(application)
         readAllData = repository.fetchAllItemsInCart()
     }
 
-
     fun insertFoodIntoCart(foodModel: FoodModel){
         viewModelScope.launch(Dispatchers.IO) {
             repository.insert(foodModel)
             //itemAdded.postValue(foodModel)
         }
     }
-
 
     fun updateFoodNoInCart(foodModel: FoodModel){
         viewModelScope.launch(Dispatchers.IO) {

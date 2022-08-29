@@ -6,5 +6,7 @@
     <dimen name="popular_heading_text_size">18sp</dimen>
     <dimen name="recycler_view_padding_size">22sp</dimen>
 
-
+    <!--Place Order Dimensions-->
+    <dimen name="main_text_size">16sp</dimen>
+    <dimen name="error_text_size">14sp</dimen>
 </resources>

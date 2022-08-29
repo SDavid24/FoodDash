@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import com.example.fooddash.R
+import com.example.fooddash.activity.NewMainActivity
 import com.example.fooddash.databinding.FragmentSignupBinding
 import com.example.fooddash.firebase.FirestoreClass
 import com.example.fooddash.fragments.operations.HomeFragment
@@ -138,6 +139,8 @@ class SignupFragment : BaseFragment() {
         parentFragmentManager.beginTransaction().apply {
             replace(R.id.flFragment, homeFragment)
             commit()
+
+            (activity as NewMainActivity).showAppBar()
         }
     }
 

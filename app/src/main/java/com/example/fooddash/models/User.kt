@@ -5,5 +5,7 @@ data class User(
     val name : String = "",
     val email : String = "",
     val mobile : Long = 0,
-    val image : String = ""
+    val image : String = "",
+    val homeAddress : String = "",
+    val workAddress : String = ""
     )

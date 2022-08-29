@@ -22,7 +22,7 @@ android {
 
     buildTypes {
         release {
-            minifyEnabled false
+              false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
@@ -85,4 +85,9 @@ dependencies {
     //Firebase Storage dependency
     implementation 'com.google.firebase:firebase-storage:20.0.1'
     implementation 'com.google.firebase:firebase-storage-ktx:20.0.1'
+
+    //Firebase cloud messaging notifications dependency
+    //implementation 'com.google.firebase:firebase-messaging:23.0.5'
+    //implementation 'com.google.firebase:firebase-messaging-ktx:23.0.5'
+
 }

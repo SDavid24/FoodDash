@@ -8,7 +8,6 @@ import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.example.fooddash.R
 import com.example.fooddash.models.FoodModel
-import kotlinx.android.synthetic.main.activity_show_details.*
 import kotlinx.android.synthetic.main.viewholder_cart.view.*
 import kotlin.math.roundToInt
 

@@ -5,16 +5,31 @@
       <map>
         <entry key="../../../Library/Android/sdk/platforms/android-31/data/res/layout/auto_complete_list.xml" value="0.1" />
         <entry key="app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.11944444444444445" />
+        <entry key="app/src/main/res/drawable/background_blue.xml" value="0.22239583333333332" />
+        <entry key="app/src/main/res/drawable/background_btn.xml" value="0.1259259259259259" />
+        <entry key="app/src/main/res/drawable/background_edt_search.xml" value="0.1259259259259259" />
+        <entry key="app/src/main/res/drawable/bcakground_title_article.xml" value="0.1259259259259259" />
+        <entry key="app/src/main/res/drawable/btn_background.xml" value="0.1259259259259259" />
+        <entry key="app/src/main/res/drawable/btn_background3.xml" value="0.1259259259259259" />
+        <entry key="app/src/main/res/drawable/btn_background4.xml" value="0.1259259259259259" />
+        <entry key="app/src/main/res/drawable/btn_background5.xml" value="0.1259259259259259" />
         <entry key="app/src/main/res/drawable/cart_background.xml" value="0.11944444444444445" />
         <entry key="app/src/main/res/drawable/cat_background1.xml" value="0.11944444444444445" />
         <entry key="app/src/main/res/drawable/cat_background2.xml" value="0.11944444444444445" />
         <entry key="app/src/main/res/drawable/cat_background3.xml" value="0.11944444444444445" />
         <entry key="app/src/main/res/drawable/cat_background4.xml" value="0.11944444444444445" />
         <entry key="app/src/main/res/drawable/cat_background5.xml" value="0.11944444444444445" />
+        <entry key="app/src/main/res/drawable/ic_baseline_phone_android_24.xml" value="0.12037037037037036" />
+        <entry key="app/src/main/res/drawable/ic_baseline_settings_24.xml" value="0.1259259259259259" />
+        <entry key="app/src/main/res/drawable/ic_delete.xml" value="0.1259259259259259" />
         <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.11944444444444445" />
+        <entry key="app/src/main/res/drawable/ic_phone_try_background.xml" value="0.12037037037037036" />
+        <entry key="app/src/main/res/drawable/ic_phone_try_foreground.xml" value="0.12037037037037036" />
         <entry key="app/src/main/res/drawable/orange_button.xml" value="0.11944444444444445" />
+        <entry key="app/src/main/res/drawable/orange_circle.xml" value="0.22239583333333332" />
         <entry key="app/src/main/res/drawable/orange_light_banner.xml" value="0.11944444444444445" />
         <entry key="app/src/main/res/drawable/search_background.xml" value="0.11944444444444445" />
+        <entry key="app/src/main/res/drawable/viewholder_popular.xml" value="0.1259259259259259" />
         <entry key="app/src/main/res/font/font.xml" value="0.14814814814814814" />
         <entry key="app/src/main/res/layout/activity_base.xml" value="0.20208333333333334" />
         <entry key="app/src/main/res/layout/activity_cart_list.xml" value="0.25" />
@@ -28,13 +43,17 @@
         <entry key="app/src/main/res/layout/fragment_cart_list.xml" value="0.20208333333333334" />
         <entry key="app/src/main/res/layout/fragment_home.xml" value="0.20208333333333334" />
         <entry key="app/src/main/res/layout/fragment_login.xml" value="0.20208333333333334" />
+        <entry key="app/src/main/res/layout/fragment_place_order.xml" value="0.20208333333333334" />
+        <entry key="app/src/main/res/layout/fragment_profile.xml" value="0.22" />
         <entry key="app/src/main/res/layout/fragment_show_details.xml" value="0.20208333333333334" />
         <entry key="app/src/main/res/layout/fragment_signup.xml" value="0.20208333333333334" />
         <entry key="app/src/main/res/layout/fragment_splash.xml" value="0.20208333333333334" />
-        <entry key="app/src/main/res/layout/viewholder_cart.xml" value="0.19427083333333334" />
+        <entry key="app/src/main/res/layout/viewholder_cart.xml" value="0.5" />
         <entry key="app/src/main/res/layout/viewholder_category.xml" value="0.5" />
         <entry key="app/src/main/res/layout/viewholder_popular.xml" value="0.19427083333333334" />
         <entry key="app/src/main/res/menu/bottom_nav.xml" value="0.20208333333333334" />
+        <entry key="app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.12037037037037036" />
+        <entry key="app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.12037037037037036" />
       </map>
     </option>
   </component>

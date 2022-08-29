@@ -38,14 +38,29 @@ class HomeFragment : Fragment() {
         return binding.root
     }
 
-
-
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        (activity as NewMainActivity?)!!.showAppBar()
 
         /**Initializing the view model provider*/
         viewModel = ViewModelProvider(this).get(FoodCartViewModel::class.java)
 
+
+        binding.userRoundImageFragment.setOnClickListener {
+            val profileFragment = ProfileFragment()
+
+            parentFragmentManager.beginTransaction().apply {
+                replace(R.id.flFragment, profileFragment)
+                addToBackStack("HomeFragment")
+                commit()
+
+                //NewMainActivity().hideAppBar()
+                (activity as NewMainActivity?)!!.hideAppBar()
+
+
+            }
+        }
         //loading the user's data into the apps UI from firebase
         FirestoreClass().loadUserDataFragment(this)
 
@@ -61,7 +76,7 @@ class HomeFragment : Fragment() {
         Glide.with(requireContext())
             .load(user.image)
             .centerCrop()
-            .placeholder(R.drawable.profile)
+            .placeholder(R.drawable.ic_user_place_holder)
             .into(binding.userRoundImageFragment)
     }
 
@@ -110,8 +125,6 @@ class HomeFragment : Fragment() {
         popular_section_recyclerview_fragment.setHasFixedSize(true)
 
      /**Click listener for the whole recycler view interface that takes it to the details page*/
-
-
         adapter.onclickListener = object : PopularFoodsAdapter.OnclickListener {
             override fun onClick(position: Int, model: FoodModel) {
                 val bundle = Bundle()
@@ -119,12 +132,13 @@ class HomeFragment : Fragment() {
                 showDetailsFragment.arguments = bundle
                 parentFragmentManager.beginTransaction().apply {
                     replace(R.id.flFragment, showDetailsFragment)
-                    addToBackStack(null)
+                    addToBackStack("Home_TAG")
                     commit()
 
                     //NewMainActivity().hideAppBar()
                     (activity as NewMainActivity?)!!.hideAppBar()
 
+                    
                 }
                // val intent = Intent(this, ShowDetailsActivity::class.java)
                 //intent.putExtra(Constants.FOOD_DETAILS, model)
@@ -138,7 +152,6 @@ class HomeFragment : Fragment() {
                 addToCart(model)
             }
         }
-
     }
 
     /**Recycler view set up for the food category section*/

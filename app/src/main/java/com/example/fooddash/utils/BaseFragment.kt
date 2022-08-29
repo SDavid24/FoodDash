@@ -19,7 +19,6 @@ open class BaseFragment : Fragment(R.layout.fragment_base) {
         super.onViewCreated(view, savedInstanceState)
     }
 
-
     /**Method that handles the immediate afterwards of the sign up process*/
     fun userRegisteredSuccess(context: Context){
         Toast.makeText(context, "You have successfully registered",
@@ -36,7 +35,6 @@ open class BaseFragment : Fragment(R.layout.fragment_base) {
             //finish() //Finishes the activity
         }
     }
-
 
     /**Method to show the circling progress dialog when something is loading*/
     fun showProgressDialog(){

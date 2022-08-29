@@ -3,6 +3,7 @@ package com.example.fooddash.fragments.operations
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
+import androidx.activity.OnBackPressedCallback
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.example.fooddash.activity.NewMainActivity
@@ -10,7 +11,6 @@ import com.example.fooddash.R
 import com.example.fooddash.models.FoodModel
 import com.example.fooddash.room.FoodCartViewModel
 import com.example.fooddash.utils.Constants
-import kotlinx.android.synthetic.main.activity_show_details.*
 import kotlinx.android.synthetic.main.fragment_show_details.*
 import kotlin.math.roundToInt
 
@@ -24,6 +24,7 @@ class ShowDetailsFragment : Fragment(R.layout.fragment_show_details) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        onBackPressed()
         /**Initializing the view model provider*/
         viewModel = ViewModelProvider(this).get(FoodCartViewModel::class.java)
 
@@ -31,13 +32,29 @@ class ShowDetailsFragment : Fragment(R.layout.fragment_show_details) {
         addToCart()
     }
 
+    /**Customizing the back press function so it can show the */
+    private fun onBackPressed(){
+        requireActivity().onBackPressedDispatcher.addCallback(viewLifecycleOwner, object :
+            OnBackPressedCallback(true) {
+            override fun handleOnBackPressed() {
 
+                val homeFragment = HomeFragment()
+                parentFragmentManager.beginTransaction().apply {
+                    replace(R.id.flFragment, homeFragment)
+                    commit()
+
+                    //(activity as NewMainActivity?)!!.showAppBar()
+                }
+            }
+
+        })
+
+    }
 
     /**Method that gets and displays the information of the chosen food that was sent into this activity*/
     private fun getIntData(){
         val bundle = this.arguments
         foodDetailsModel = bundle!!.getParcelable(Constants.FOOD_DETAILS)
-
 
         showDetails_titleTxt_fragment!!.text = foodDetailsModel!!.title
         showDetails_priceTxt_fragment!!.text = ("$" + foodDetailsModel!!.fee.toString())
@@ -58,7 +75,7 @@ class ShowDetailsFragment : Fragment(R.layout.fragment_show_details) {
                 orderAmount = 1
             }else{
                 orderAmount -= 1
-                showDetails_numberOfOrderTxt.text = orderAmount.toString()
+                showDetails_numberOfOrderTxt_fragment.text = orderAmount.toString()
             }
         }
 
@@ -70,9 +87,7 @@ class ShowDetailsFragment : Fragment(R.layout.fragment_show_details) {
                 commit()
             }
         }
-
     }
-
 
 
     /**Method that gets the current details of the meals after it must have been edited before being sent to the cart activity*/

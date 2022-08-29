@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import com.example.fooddash.R
+import com.example.fooddash.activity.NewMainActivity
 import com.example.fooddash.databinding.FragmentLoginBinding
 import com.example.fooddash.firebase.FirestoreClass
 import com.example.fooddash.utils.BaseFragment
@@ -24,7 +25,6 @@ class LoginFragment : BaseFragment() {
         //binding.viewmodel = vm//attach your viewModel to xml
         return loginBinding.root
     }
-
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -45,7 +45,6 @@ class LoginFragment : BaseFragment() {
         }
     }
 
-
     /**Method that carries out the sign in process by first calling the form validity function and then calling the Firestore sign in function*/
     private fun signInUserWithDetails() {
         val email = signInEmail_fragment.text.toString().trim { it <= ' ' }
@@ -61,6 +60,9 @@ class LoginFragment : BaseFragment() {
 
                     //Loading the signed in user's data from Firestore using the method from Firestore class
                     FirestoreClass().loadUserDataFragment(this)
+
+                    (activity as NewMainActivity).showAppBar()
+
                 }else{
                     signInLoadingStopped()
                     Toast.makeText(
